@@ -1,12 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
 ## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ## Global information. The functions 'cacheSolve' and 'makeCacheMatrix' will make it possible to calculate the inverse of a  +  
 ## given matrix and 'cache' it so it will not be necessary to calculate it again if the inverse of the same matrix is needed +
 ## again (thus saving computation time). For more detailed explanations, cfr. below.                                         +
 ## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-## Write a short comment describing this function
 ## The functon 'makeCacheMatrix' take a matrix x as its input argument and return a list containing
 ## four functions. The functions will make it possible to provide a new non-inverted matrix to replace the original one,
 ## to get the matrix currently stored in the variable x, to set the value of the variable 'inv' which either holds the
@@ -57,14 +54,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
-
-## Write a short comment describing this function
 ## The function 'cacheSolve' requires the list genreated by makeCacheMatrix as its input argument. Depending on whether the inverse of the
 ## matrix in the parent environment of x has already been calculated it will either print a message and return the existing inverted matrix
 ## or calculate and return a newly calculated inverted matrix. 
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
   
   inv <- x$getInverse()
   
